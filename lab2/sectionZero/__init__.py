@@ -1,3 +1,3 @@
-from sectionZero.synop import *
-from sectionZero.synopCollection import *
-from sectionZero.date import *
+from sectionzero.ZeroCollection import *
+from sectionzero.Date import *
+from sectionzero.WindIndicator import *

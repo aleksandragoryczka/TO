@@ -1,2 +1,3 @@
-from helpers.dataProvider import *
-from helpers.synopDictionary import *
+from helpers.DataProvider import *
+from helpers.SynopDictionary import *
+from helpers.ContentHandler import *

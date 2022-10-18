@@ -7,6 +7,11 @@ windIndicator: dict[str, str] = {
     "3" : "Predkosc wiatru oszacowana w wezlach",
     "4" : "Predkosc wiatru zmierzono anemoeatrem w wezlach"
 }
+
+
+# Begginning of section one
+
+
 rainGroupIndicator = {
     "0" : "grupa opadowa w sekcji 1 i 3",
     "1" : "grupa opadowa tylko w sekcji 1",
@@ -135,6 +140,7 @@ visibility: dict[str, str] = {
     "97" : "10",
     "98" : "20",
     "99" : ">50",
+    "//" : "widoczność nieznana"
 }
 
 cloudyIndicator: dict[str, str] = {
@@ -193,6 +199,7 @@ windDirection: dict[str, str] = {
     "99" : "wiatr zmienny",
 }
 
+
 standardIsobaricSurface: dict[str, str] = {
     "1" : "1000 hPa",
     "2" : "925 hPa",
@@ -200,6 +207,7 @@ standardIsobaricSurface: dict[str, str] = {
     "7" : "700 hPa",
     "8" : "850 hPa"
 }
+
 
 tendencyAtmosphericPressure: dict[str, str] = {
     "0" : "wzrost, potem spadek; ciśnienie jest wyższe lub takie samo jak przed trzema godzinami",
