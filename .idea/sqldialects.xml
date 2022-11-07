@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/lab4/password/PasswordDecoding.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/lab4/singleUser/InsertNote.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/lab4/sql_statement.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/lab4/users/InsertUser.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/lab4/users/LogInUser.py" dialect="GenericSQL" />
+  </component>
+</project>
