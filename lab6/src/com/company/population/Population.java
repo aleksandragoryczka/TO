@@ -91,13 +91,4 @@ public class Population{
         return getHealthy();
     }
 
-
-
-
-
-
-
-
-
-
 }

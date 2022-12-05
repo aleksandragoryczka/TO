@@ -21,10 +21,10 @@ public class PopulationGenerator {
         double y = 0;
 
         if(random.nextInt(PROBABILITY_OF_ENTRY) == 0){
-            x = random.nextDouble() * area.getWidth() * 0.1;
+            x = random.nextDouble() * area.getWidth() *0.1 ;
         }
         else{
-            y = random.nextDouble() * area.getHeight() * 0.1;
+            y = random.nextDouble() * area.getHeight() *0.1;
         }
 
         LinkedHashMap<Integer, Double> distances = new LinkedHashMap<>();
