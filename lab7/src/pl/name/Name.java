@@ -1,7 +1,7 @@
-package com.name;
+package pl.name;
 
 public class Name implements IName{
-    private String name;
+    private final String name;
 
     public Name(String name) {
         this.name = name;

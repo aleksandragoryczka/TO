@@ -1,12 +1,12 @@
-package com.name;
+package pl.name;
 
 import java.util.HashMap;
 
 public class NameFactory {
-    private HashMap<String, IName> names;
+    private final HashMap<String, IName> names;
 
     public NameFactory() {
-        this.names = new HashMap<String, IName>();
+        this.names = new HashMap<>();
     }
 
     public IName getName(String name){

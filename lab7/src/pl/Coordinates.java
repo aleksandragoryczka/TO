@@ -1,7 +1,7 @@
-package com;
+package pl;
 
 public class Coordinates {
-    private double posX, posY;
+    private final double posX, posY;
 
     public Coordinates(double posX, double posY) {
         this.posX = posX;

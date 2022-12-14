@@ -1,38 +1,35 @@
-package com.View;
+package pl.View;
 
-import com.Coordinates;
-import com.name.NameFactory;
-import com.person.IPerson;
-import com.person.Person;
-import com.person.PersonProxy;
+import pl.Coordinates;
+import pl.name.NameFactory;
+import pl.person.IPerson;
+import pl.person.Person;
+import pl.person.PersonProxy;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class View {
 
-    private ArrayList<IPerson> persons = new ArrayList<IPerson>();
-    private NameFactory nameFactory = new NameFactory();
+    private final ArrayList<IPerson> persons = new ArrayList<>();
+    private final NameFactory nameFactory = new NameFactory();
 
 
 
-    public void show() throws IOException {
-        FileWriter fileWriter = new FileWriter("names.txt");
+    public void show() {
 
         boolean exit = false;
         while(!exit){
             int choice = menu();
             if(choice == 1)
-                addPerson(fileWriter);
+                addPerson();
             if(choice == 2)
                 verifyPerson();
+            if(choice==0)
+                exit = true;
         }
 
-
-        fileWriter.write("");
     }
 
     private int menu(){
@@ -40,13 +37,12 @@ public class View {
         System.out.println("[0] WYJŚCIE");
         System.out.println("[1] Dodaj osobę");
         System.out.println("[2] Zweryfikuj osobę");
-        int option = scanner.nextInt();
-        return option;
+        return scanner.nextInt();
     }
 
-    private void addPerson(FileWriter fileWriter){
+    private void addPerson(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\nPODAJ DANE NOWEJOSOBY");
+        System.out.println("\nPODAJ DANE NOWEJ OSOBY");
         System.out.print("Imię: ");
         String name = scanner.nextLine();
         System.out.print("Nazwisko: ");
@@ -65,14 +61,27 @@ public class View {
     }
 
     private void verifyPerson(){
+        Scanner scanner = new Scanner(System.in);
         System.out.println("\nPODAJ DANE OSOBY");
         System.out.print("Imię: ");
+        String name = scanner.nextLine();
+        System.out.print("Nazwisko: ");
+        String surname = scanner.nextLine();
+
+        PersonProxy personProxy = new PersonProxy();
+        Coordinates coordinates = new Coordinates(0,0);
+        IPerson person = personProxy.createPerson(nameFactory, name, surname, coordinates);
+
+
+        for (IPerson p : persons             )
+        {
+            if(Objects.equals(p.getName(), person.getName()) && Objects.equals(p.getSurname(), person.getSurname())){
+                System.out.println(p.getName() + " " + p.getSurname() + "  " + p.getCoordinates());
+                return;
+            }
+        }
+        System.out.println("Taka ososba nie istnieje w bazie.");
+
     }
 
-
-
-
-    public ArrayList<IPerson> getPersons() {
-        return persons;
-    }
 }

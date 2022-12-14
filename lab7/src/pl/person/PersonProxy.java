@@ -1,7 +1,7 @@
-package com.person;
+package pl.person;
 
-import com.Coordinates;
-import com.name.NameFactory;
+import pl.Coordinates;
+import pl.name.NameFactory;
 
 public class PersonProxy implements IPerson{
 

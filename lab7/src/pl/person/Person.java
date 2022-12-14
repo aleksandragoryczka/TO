@@ -1,8 +1,8 @@
-package com.person;
+package pl.person;
 
-import com.Coordinates;
-import com.name.IName;
-import com.name.NameFactory;
+import pl.Coordinates;
+import pl.name.IName;
+import pl.name.NameFactory;
 
 public class Person implements IPerson{
     private IName name;
